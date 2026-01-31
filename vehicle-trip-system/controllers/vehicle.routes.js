@@ -29,7 +29,7 @@ exports.createVehicle=async(req,res)=>{
     }
     exports.getVehicle=async(req,res)=>{
         const {data}=await supabase.from('vehicles')
-        .select(*)
+        .select('*')
         .eq('id',req.params.vehicleId);
         req.json(data);
     }
