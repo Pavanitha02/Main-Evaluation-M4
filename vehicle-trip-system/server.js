@@ -9,9 +9,7 @@ app.use(logger);
 
 app.use('/vehicles',require('../routes/vehicle.routes'));
 app.use('/trips',require('../routes/trips.routes'));
-app.use('/vehicles',require('../routes/vehicle.routes'));
-
-
+app.use('/analytics',require('../routes/analytics.routes'));
 
 app.use(notFound);
 app.listen(process.env.PORT,()=>console.log("server running"));

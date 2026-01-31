@@ -1,5 +1,4 @@
-const {createClient} =require(@supabase/supabase-js)
-require('dotenv').config();
-
-const supabase=createClient(process.env.SUPABASE_URL,Process.env.SUPABASE_KEY);
-module.exports=supabase;
+const router=require('express').Router();
+const {getAnalytics}=require('../constrollers/analytics.controller');
+router.get('/',getAnalytics);
+module.exports=router;
